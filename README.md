@@ -7,7 +7,7 @@ This application was built using:
 * Android
 * Java
 * JSON
-*SQL
+* SQL
 
 # SCREENSHOTS
 
