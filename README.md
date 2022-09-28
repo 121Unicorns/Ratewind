@@ -5,7 +5,7 @@
 ### NOTE:
 #### This project is a rating application.
 
-This web application was built using:
+This application was built using:
 
 * Android
 * Java
