@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".NewratingActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ll_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/editor_background"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text=""
+                android:hint="Enter Name"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blue3"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_usertype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/editor_background"
+                android:elevation="8dp"
+                android:tag="Account type"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_name">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Account type:"
+                    android:fontFamily="@font/quicksand"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:padding="@dimen/_3sdp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_tenant"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:fontFamily="@font/quicksand"
+                    android:buttonTint="@color/teal_700"
+                    android:textColor="@color/black"
+                    android:text="Tenant"
+                    android:checked="true"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_landlord"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:fontFamily="@font/quicksand"
+                    android:buttonTint="@color/teal_700"
+                    android:textColor="@color/black"
+                    android:text="Property Manager"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+
+            <RatingBar
+                android:id="@+id/rb_rating"
+                style="@android:attr/ratingBarStyleSmall"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:isIndicator="false"
+                android:max="5"
+                android:scaleX=".5"
+                android:scaleY=".5" />
+
+            <EditText
+                android:id="@+id/et_review"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:background="@drawable/editor_background"
+                android:textColor="@color/white"
+                android:elevation="8dp"
+                android:gravity="top"
+                android:hint="Please write your review here..."
+                android:inputType="textMultiLine"
+                android:maxLength="500"
+                android:padding="@dimen/_10sdp"
+                android:textColorHint="@color/blue3"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:text="Submit"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_20sdp"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/quicksand"
+        android:elevation="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_card"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:id="@+id/tv_submit"/>
+
+    <TextView
+        android:id="@+id/textviewshow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_submit" />
+
+    <ProgressBar
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="2dp"
+        android:visibility="gone"
+        android:id="@+id/submit_progress"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

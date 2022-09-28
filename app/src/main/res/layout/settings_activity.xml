@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                app:elevation="0dp">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                    android:backgroundTint="@color/blue3"
+                    android:gravity="bottom"
+                    app:layout_collapseMode="pin"
+                    app:titleTextColor="@color/white"
+                    app:title="Settings"
+                    app:titleTextAppearance="@style/TabText"/>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_18sdp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/teal_200"
+                android:text="Welcome, " />
+
+            <TextView
+                android:id="@+id/tv_profname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stranger"
+                android:textColor="@color/teal_200"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You are logged in as"
+            android:textSize="13sp"
+            android:textColor="@color/blue4"
+            android:fontFamily="@font/quicksand"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:id="@+id/tv_type"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

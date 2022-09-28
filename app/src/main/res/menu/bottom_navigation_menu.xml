@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/reviewed"
+        android:enabled="true"
+        android:icon="@drawable/ic_star"
+        android:title="Reviewed"/>
+    <item
+        android:id="@+id/received"
+        android:enabled="true"
+        android:icon="@drawable/ic_prof"
+        android:title="My Reviews"/>
+</menu>
