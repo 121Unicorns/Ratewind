@@ -1,9 +1,6 @@
 # RateWind
 
-# GETTING STARTED
-
-### NOTE:
-#### This project is a rating application.
+#### This project is a rating and review application.
 
 This application was built using:
 
