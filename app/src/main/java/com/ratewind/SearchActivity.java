@@ -352,7 +352,7 @@ public class SearchActivity extends AppCompatActivity implements RatingAdapter.L
 
         try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-            ConnectionURL = "jdbc:jtds:sqlserver://ratewind.database.windows.net:1433;DatabaseName=ratewind;user=ratewind_admin@ratewind;password=Aobcd8663!;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;ssl=request";
+            ConnectionURL = "url";
             con = DriverManager.getConnection(ConnectionURL);
         } catch (SQLException se) {
             Log.e("SQLEXCEPTION: ", se.getMessage());
